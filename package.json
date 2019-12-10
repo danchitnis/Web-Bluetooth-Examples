@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danchitnis/Arduino-BLE-wegl-plot.git"
+    "url": "git+https://github.com/danchitnis/arduino-web-examples.git"
   },
   "author": "Danial Chitnis",
   "license": "MIT",
