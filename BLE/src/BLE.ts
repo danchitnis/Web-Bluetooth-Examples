@@ -12,10 +12,10 @@
 
  btConnect.addEventListener("click", () => {
 
-    const charServiceUuid = "19B10000E8F2537E4F6CD104768A1214";
-    const charCharacteristicUuid = "19B10001E8F2537E4F6CD104768A1214";
-    const serviceUuid = parseInt(charServiceUuid);
-    const characteristicUuid = parseInt(charCharacteristicUuid);
+    const serviceUuid = "19B10000-E8F2-537E-4F6C-D104768A1214" as BluetoothServiceUUID;
+    const characteristicUuid = "19B10001-E8F2-537E-4F6C-D104768A1214" as BluetoothCharacteristicUUID;
+    //const serviceUuid = parseInt(charServiceUuid);
+    //const characteristicUuid = parseInt(charCharacteristicUuid);
     /*let serviceUuid = document.querySelector("#service").value;
     if (serviceUuid.startsWith("0x")) {
         serviceUuid = parseInt(serviceUuid);
