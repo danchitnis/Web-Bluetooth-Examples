@@ -7,8 +7,8 @@
 var btConnect = document.getElementById("btConnect");
 var pLog = document.getElementById("pLog");
 btConnect.addEventListener("click", function () {
-    var charServiceUuid = "19B10000-E8F2-537E-4F6C-D104768A1214";
-    var charCharacteristicUuid = "19B10001-E8F2-537E-4F6C-D104768A1214";
+    var charServiceUuid = "19B10000E8F2537E4F6CD104768A1214";
+    var charCharacteristicUuid = "19B10001E8F2537E4F6CD104768A1214";
     var serviceUuid = parseInt(charServiceUuid);
     var characteristicUuid = parseInt(charCharacteristicUuid);
     /*let serviceUuid = document.querySelector("#service").value;
