@@ -52,8 +52,9 @@ btConnect.addEventListener("click", function () {
         log("> Signed Write:         " +
             characteristic.properties.authenticatedSignedWrites);
         log("> Queued Write:         " + characteristic.properties.reliableWrite);
-        log("> Writable Auxiliaries: " +
-            characteristic.properties.writableAuxiliaries);
+        log("> Writable Auxiliaries: " + characteristic.properties.writableAuxiliaries);
+        var a = Uint8Array.of(1);
+        characteristic.writeValue(a);
     })["catch"](function (error) {
         log("Argh! " + error);
     });
