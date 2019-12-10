@@ -29,6 +29,7 @@
     log("Requesting Bluetooth Device...");
     navigator.bluetooth.requestDevice({
         acceptAllDevices: true,
+        optionalServices: [serviceUuid]
         //filters: [{
             //services: [serviceUuid]
         //}]
