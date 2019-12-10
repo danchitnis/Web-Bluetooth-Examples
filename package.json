@@ -1,0 +1,26 @@
+{
+  "name": "arduino-web-examples",
+  "version": "0.0.1",
+  "description": "Using the IMU 9-axis sensor to plot on webgl-plot",
+  "main": "index.js",
+  "dependencies": {
+    "@types/web-bluetooth": "0.0.4"
+  },
+  "devDependencies": {
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danchitnis/Arduino-BLE-wegl-plot.git"
+  },
+  "author": "Danial Chitnis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danchitnis/Arduino-BLE-wegl-plot/issues"
+  },
+  "homepage": "https://github.com/danchitnis/Arduino-BLE-wegl-plot#readme"
+}
