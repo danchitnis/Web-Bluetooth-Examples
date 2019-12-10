@@ -27,7 +27,12 @@
     }*/
 
     log("Requesting Bluetooth Device...");
-    navigator.bluetooth.requestDevice({filters: [{services: [serviceUuid]}]})
+    navigator.bluetooth.requestDevice({
+        acceptAllDevices: true,
+        filters: [{
+            services: [serviceUuid]
+        }]
+    })
     .then( (device) => {
         log("Connecting to GATT Server...");
         return device.gatt.connect();

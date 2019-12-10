@@ -21,7 +21,12 @@ btConnect.addEventListener("click", function () {
         characteristicUuid = parseInt(characteristicUuid);
     }*/
     log("Requesting Bluetooth Device...");
-    navigator.bluetooth.requestDevice({ filters: [{ services: [serviceUuid] }] })
+    navigator.bluetooth.requestDevice({
+        acceptAllDevices: true,
+        filters: [{
+                services: [serviceUuid]
+            }]
+    })
         .then(function (device) {
         log("Connecting to GATT Server...");
         return device.gatt.connect();
