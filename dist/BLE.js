@@ -1,32 +1,29 @@
 /**
- *
+ * WebBlutooth example for Arduino Nano BLE 33
  *
  * Author: Danial Chitnis
  * December 2019
+ *
+ * Please upload the sketch before running this code
  */
+var LED = false;
+var bleChar;
 var btConnect = document.getElementById("btConnect");
+var btLED = document.getElementById("btLED");
 var pLog = document.getElementById("pLog");
 btConnect.addEventListener("click", function () {
+    /**
+     * these should match the UUID in your Arduino sketch. you can generate your own UUIDs here:
+     * https://www.uuidgenerator.net/
+     */
     var serviceUuid = "f8c4fc40-e7d3-4e81-b686-9be0160b9b7d";
     var characteristicUuid = "f8c4fc41-e7d3-4e81-b686-9be0160b9b7d";
-    //const serviceUuid = parseInt(charServiceUuid);
-    //const characteristicUuid = parseInt(charCharacteristicUuid);
-    /*let serviceUuid = document.querySelector("#service").value;
-    if (serviceUuid.startsWith("0x")) {
-        serviceUuid = parseInt(serviceUuid);
-    }
-
-    let characteristicUuid = document.querySelector("#characteristic").value;
-    if (characteristicUuid.startsWith("0x")) {
-        characteristicUuid = parseInt(characteristicUuid);
-    }*/
+    // The following code section is based on Chrome example
+    // https://googlechrome.github.io/samples/web-bluetooth/characteristic-properties.html
     log("Requesting Bluetooth Device...");
     navigator.bluetooth.requestDevice({
         acceptAllDevices: true,
         optionalServices: [serviceUuid]
-        //filters: [{
-        //services: [serviceUuid]
-        //}]
     })
         .then(function (device) {
         log("Connecting to GATT Server...");
@@ -53,13 +50,25 @@ btConnect.addEventListener("click", function () {
             characteristic.properties.authenticatedSignedWrites);
         log("> Queued Write:         " + characteristic.properties.reliableWrite);
         log("> Writable Auxiliaries: " + characteristic.properties.writableAuxiliaries);
-        var a = Uint8Array.of(1);
-        characteristic.writeValue(a);
+        bleChar = characteristic;
     })["catch"](function (error) {
         log("Argh! " + error);
     });
 });
+btLED.addEventListener("click", function () {
+    bleChar.writeValue(LEDtoBuffer(LED));
+    log("LED is now " + LED);
+    LED = !LED;
+});
 function log(str) {
     pLog.innerHTML = pLog.innerHTML + "<br>> " + str;
+}
+function LEDtoBuffer(LEDstate) {
+    if (LEDstate) {
+        return Uint8Array.of(1);
+    }
+    else {
+        return Uint8Array.of(0);
+    }
 }
 //# sourceMappingURL=BLE.js.map
