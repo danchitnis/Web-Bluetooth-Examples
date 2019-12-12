@@ -1,5 +1,5 @@
 {
     "board": "arduino:mbed:nano33ble",
     "port": "COM4",
-    "sketch": "BLE\\BLE_LED.ino"
+    "sketch": "BLE\\BLE_LED\\BLE_LED.ino"
 }

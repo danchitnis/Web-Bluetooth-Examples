@@ -26,7 +26,11 @@ const int ledPin = LED_BUILTIN; // pin to use for the LED
 
 void setup() {
   Serial.begin(9600);
-  while (!Serial);
+  
+  // Danial: Does not wait for serial connection
+  // while (!Serial);
+  wait_ms(500);
+
 
   // set LED pin to output mode
   pinMode(ledPin, OUTPUT);
