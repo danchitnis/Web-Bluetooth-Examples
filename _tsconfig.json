@@ -10,7 +10,8 @@
     }
   },
   "include": [
-    "BLE/**/*"
+    "BLE/**/*",
+    "USB/**/*"
     //"src/histogram.ts",
     //"src/webglplot/*"
   ]

@@ -4,6 +4,7 @@
   "description": "Using the IMU 9-axis sensor to plot on webgl-plot",
   "main": "index.js",
   "dependencies": {
+    "@types/w3c-web-usb": "^1.0.3",
     "@types/web-bluetooth": "0.0.4"
   },
   "devDependencies": {
@@ -11,7 +12,7 @@
     "typescript": "^3.7.3"
   },
   "scripts": {
-    "build": "tsc"
+    "build2": "tsc USB\\src\\WebUSB.ts --outFile USB\\dist\\WebUSB.js --sourceMap true"
   },
   "repository": {
     "type": "git",
