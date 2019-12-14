@@ -5,6 +5,8 @@
             "includePath": [
                 "C:\\Users\\Danial\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
                 "C:\\Users\\Danial\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed\\1.1.3\\**",
+                "D:\\Danial\\Arduino\\libraries\\ArduinoBLE\\src\\**",
+                "D:\\Danial\\Arduino\\libraries\\Arduino_LSM9DS1\\src\\**",
                 "${workspaceFolder}/**"
             ],
             "defines": [
