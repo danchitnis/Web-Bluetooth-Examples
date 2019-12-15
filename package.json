@@ -13,7 +13,8 @@
   "scripts": {
     "build1": "tsc BLE_LED/src/BLE_LED.ts --outFile BLE_LED/dist/BLE_LED.js --sourceMap true",
     "build2": "tsc BLE_Stream/src/BLE_Stream.ts --outFile BLE_Stream/dist/BLE_Stream.js --sourceMap true",
-    "build": "npm run build1 && npm run build2"
+    "build3": "tsc BLE_IMU_Text/src/BLE_IMU_Text.ts --outFile BLE_IMU_Text/dist/BLE_IMU_Text.js --sourceMap true",
+    "build": "npm run build1 && npm run build2 npm run build3"
   },
   "repository": {
     "type": "git",
