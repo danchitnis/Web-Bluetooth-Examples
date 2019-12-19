@@ -16,7 +16,7 @@
 */
 
 #include <ArduinoBLE.h>
-#include <Arduino_LSM9DS1.h>
+#include <Arduino_LSM9DS1_Danial.h>
 
  // BLE Battery Service
 BLEService IMUservice("f8c4fc40-e7d3-4e81-b686-9be0160b9b7d");
