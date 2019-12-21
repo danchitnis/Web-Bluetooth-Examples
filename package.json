@@ -7,12 +7,14 @@
     "@types/web-bluetooth": "0.0.4"
   },
   "devDependencies": {
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.3"
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.8.0",
+    "typescript": "^3.7.4"
   },
   "scripts": {
     "build1": "tsc BLE_LED/src/BLE_LED.ts --outFile BLE_LED/dist/BLE_LED.js --sourceMap true",
-    "build2": "tsc BLE_Stream/src/BLE_Stream.ts --outFile BLE_Stream/dist/BLE_Stream.js --sourceMap true",
+    "build2": "tsc BLE_Stream/src/BLE_Stream.ts --outFile BLE_Stream/dist/BLE_Stream.js --sourceMap true --target ES2015",
     "build3": "tsc BLE_IMU_Text/src/BLE_IMU_Text.ts --outFile BLE_IMU_Text/dist/BLE_IMU_Text.js --sourceMap true",
     "build": "npm run build1 && npm run build2 && npm run build3"
   },
